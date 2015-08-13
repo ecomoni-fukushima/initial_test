@@ -6,6 +6,11 @@ import shapefile
 import csv
 import glob
 import os.path
+
+# fd:csvファイル(複数可)が入っているディレクトリを指定
+# flg:必要に応じて1を入力
+#     1   　　:shapeファイルに変換した後すべてのファイルをマージする
+#     未入力　:shapeファイルへの変換のみを行う
 def lp2shp(fd,flg):
     # ファイルリストの作成
     flist = glob.glob(fd + "*.txt")
